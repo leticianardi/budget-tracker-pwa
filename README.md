@@ -17,3 +17,7 @@ To use this app, clone the repository and then, in your terminal, run the follow
 ## Snapshot
 
 <img src="./public/images/Screenshot 2022-02-22 155921.png">
+
+
+## Questions
+For questions, please contact the author.

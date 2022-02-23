@@ -23,8 +23,23 @@ request.onerror = function (event) {
   console.log("Something went wrong! " + event.target.errorCode);
 };
 
+
+
 // save infos if there is no connection
-function saveRecord(record) {
+
+
+function saveRecord(record){
+   // open a new transaction with the database with read and write permissions
+   const transaction = db.transaction(["pending"], "readwrite");
+
+   // access the object store for `pending`
+   const store = transaction.objectStore("pending");
+ 
+   //save the record
+   store.add(record)
+}
+
+function checkDatabase() {
   // open a new transaction with the database with read and write permissions
   const transaction = db.transaction(["pending"], "readwrite");
 
